@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Tixcraft Captcha Recognizer",
+  "version": "1.0.0",
+  "description": "Auto recognize captcha",
+  "permissions": ["tabs", "scripting"],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://tixcraft.com/ticket/ticket/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["model/model.json","model/group1-shard1of1.bin"],
+      "matches": ["https://tixcraft.com/*"]
+    }
+  ]
+}

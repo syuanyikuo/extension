@@ -1,0 +1,20 @@
+{
+  "name": "tixcraft-captcha-extension",
+  "version": "1.0.0",
+  "description": "TixCraft Captcha Recognizer Chrome Extension",
+  "scripts": {
+  "copy": "mkdir dist 2>nul & copy src\\content.js dist\\ & copy manifest.json dist\\ & xcopy model dist\\model\\ /E /I /Y",
+  "build": "parcel build src/service_worker.js --dist-dir dist/ && npm run copy"
+  },
+  "author": "syuan",
+  "license": "MIT",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "clang-format": "^1.2.3",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.13.0"
+  }
+}
