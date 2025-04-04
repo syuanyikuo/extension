@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TixCraft Captcha Recognizer Chrome Extension",
   "scripts": {
-  "copy": "mkdir dist 2>nul & copy src\\content.js dist\\ & copy manifest.json dist\\ & xcopy model dist\\model\\ /E /I /Y",
+  "copy": "mkdir dist 2>nul & copy src\\content.js dist\\ & copy src\\content2.js dist\\ & copy manifest.json dist\\ & xcopy model dist\\model\\ /E /I /Y",
   "build": "parcel build src/service_worker.js --dist-dir dist/ && npm run copy"
   },
   "author": "syuan",
